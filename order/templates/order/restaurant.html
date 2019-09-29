@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if restaurants %}
+
+        <table>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Restaurant Name</th>
+                <th>Address</th>
+            </tr>
+            {% for res in restaurants%}
+            <tr>
+                <td>{{res.id}}</td>
+                <td><a href="/order/menu-items?res_id={{res.id}}">  {{res.name}} </a></td>
+                <td>{{res.address}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+  {
+    "model": "order.RestaurantMenuItem",
+    "pk": 1,
+    "fields": {
+      "res": 1,
+      "item_name": "shahi panner",
+      "item_cost": 20
+    }
+  },
+  {
+    "model": "order.RestaurantMenuItem",
+    "pk": 2,
+    "fields": {
+      "res": 1,
+      "item_name": "matar paneer",
+      "item_cost": 30
+    }
+  }
+]

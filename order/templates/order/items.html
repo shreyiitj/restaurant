@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1> {{res_name}} </h1>
+    {% if items %}
+        <form action="{% url 'order:place-order'%}" method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+                {% for item in items%}
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.item_name}} </td>
+                    <td>{{item.item_cost}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </form>
+    {% endif %}
+</body>
+</html>
